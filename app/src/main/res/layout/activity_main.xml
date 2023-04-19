@@ -50,8 +50,11 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgPlant"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="300dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/lettuce"/>
 
             </com.google.android.material.card.MaterialCardView>
 
