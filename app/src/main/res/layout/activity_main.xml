@@ -20,7 +20,7 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/sofiaprosoftregular"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -28,36 +28,56 @@
                 app:layout_constraintTop_toTopOf="parent"
                  />
 
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                android:text="Saalim Quadri"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:fontFamily="@font/sofiaprosoftbold"
-                android:layout_marginStart="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvHello" />
+                >
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Saalim Quadri"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sofiaprosoftbold"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHello" />
+
+                <ImageButton
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:layout_gravity="center_vertical|end"
+                    android:src="@drawable/baseline_refresh_24"
+                    android:background="@android:color/transparent"
+                    />
+            </LinearLayout>
+
+
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Plant Monitor"
                 android:textSize="40sp"
                 android:textColor="@color/white"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="25dp"
                 android:fontFamily="@font/sofiaprosoftbold"/>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="14dp"
-                app:cardCornerRadius="50dp"
+                app:cardCornerRadius="25dp"
                 android:padding="10dp"
                 android:background="#14491F"
                 app:cardBackgroundColor="#14491F">
@@ -78,45 +98,76 @@
                     android:textColor="@color/white"
                     android:textSize="28sp"
                     android:fontFamily="@font/sofiaprosoftmedium"
-                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginHorizontal="20dp"
                     android:layout_marginVertical="2dp"
                     />
 
-            <TextView
-                android:id="@+id/tvHumidity"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Humidity: "
-                android:textColor="@color/white"
-                android:layout_marginLeft="25dp"
-                android:textSize="22sp"/>
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginHorizontal="15dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginVertical="20dp"
+                app:strokeWidth="1.5dp"
+                app:strokeColor="#3D8561"
+                >
 
-            <TextView
-                android:id="@+id/tvTemperature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="Temperature: "
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity: "
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="20sp"/>
 
-            <TextView
-                android:id="@+id/tvSoil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="SoilMoisture: "
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                    <TextView
+                        android:id="@+id/tvTemperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="Temperature: "
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/tvAQI"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="CO2 Level: "
-                android:textColor="@color/white"
-                android:textSize="22sp" />
+                    <TextView
+                        android:id="@+id/tvSoil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="SoilMoisture: "
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvAQI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="CO2 Level: "
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
 
         </LinearLayout>
 

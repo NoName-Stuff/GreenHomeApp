@@ -3,6 +3,7 @@ package dev.danascape.greenhome
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import dev.danascape.greenhome.api.GithubAPIClient
 import dev.danascape.greenhome.api.HomeInterface
@@ -21,8 +22,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         mApiService = GithubAPIClient.client.create(HomeInterface::class.java)
-        setContentView(binding.root)
         fetchUpdate()
+
+        binding.btnRefresh.setOnClickListener {
+            Toast.makeText(this, "Refreshing..", Toast.LENGTH_SHORT).show()
+            fetchUpdate()
+        }
+        setContentView(binding.root)
+
     }
 
     private fun fetchUpdate() {
