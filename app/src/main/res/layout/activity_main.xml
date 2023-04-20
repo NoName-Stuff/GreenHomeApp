@@ -92,7 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/lettuces"/>
+                    android:src="@drawable/lettuce"/>
 
             </com.google.android.material.card.MaterialCardView>
 
