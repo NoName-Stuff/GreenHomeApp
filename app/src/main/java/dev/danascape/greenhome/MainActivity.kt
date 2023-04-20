@@ -1,7 +1,9 @@
 package dev.danascape.greenhome
 
 import android.annotation.SuppressLint
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.provider.CalendarContract.Colors
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         mApiService = GithubAPIClient.client.create(HomeInterface::class.java)
         fetchUpdate()
+
+        window.setStatusBarColor(this.getResources().getColor(R.color.color_appBar))
 
         binding.btnRefresh.setOnClickListener {
             Toast.makeText(this, "Refreshing..", Toast.LENGTH_SHORT).show()
