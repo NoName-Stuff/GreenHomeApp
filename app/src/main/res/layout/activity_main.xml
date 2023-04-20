@@ -82,6 +82,42 @@
                     android:layout_marginVertical="2dp"
                     />
 
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity: "
+                android:textColor="@color/white"
+                android:layout_marginLeft="25dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Temperature: "
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvSoil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="SoilMoisture: "
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvAQI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="CO2 Level: "
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
         </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
