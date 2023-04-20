@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Refreshing..", Toast.LENGTH_SHORT).show()
             fetchUpdate()
         }
+
+        binding.swipeRefresh.setOnRefreshListener {
+            Toast.makeText(this, "Refreshing..", Toast.LENGTH_SHORT).show()
+            fetchUpdate()
+            binding.swipeRefresh.isRefreshing = false
+        }
         setContentView(binding.root)
 
     }
