@@ -1,9 +1,7 @@
 package dev.danascape.greenhome
 
 import android.annotation.SuppressLint
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.provider.CalendarContract.Colors
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -44,12 +42,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchUpdate() {
         val retrofit = mApiService!!.getBuildInfo()
-        retrofit.enqueue(object: Callback<BuildModel> {
+        retrofit.enqueue(object : Callback<BuildModel> {
 
             @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<BuildModel>, response: Response<BuildModel>) {
                 val resBody = response.body()
-                if(resBody != null){
+                if (resBody != null) {
                     Log.d("retrofitResponse", "res: $resBody")
                     Log.d("retrofitResponse", "name: ${resBody.humidity}")
                     binding.tvHumidity.text = "Humidity: ${resBody.humidity}%"
@@ -60,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<BuildModel>, t: Throwable) {
-                Log.e("retrofitResponse","Error: ${t.message}")
+                Log.e("retrofitResponse", "Error: ${t.message}")
             }
         })
     }

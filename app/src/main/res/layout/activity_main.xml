@@ -2,11 +2,10 @@
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:id="@+id/swipeRefresh"
-    android:background="@drawable/background">
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,35 +20,31 @@
                 android:id="@+id/tvHello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello,"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:layout_marginTop="30dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/sofiaprosoftregular"
+                android:text="Hello,"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                 />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tvName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Saalim Quadri"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
+                    android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/sofiaprosoftbold"
-                    android:layout_marginStart="20dp"
+                    android:text="Saalim Quadri"
+                    android:textSize="25sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHello" />
@@ -58,90 +53,83 @@
                     android:id="@+id/btnRefresh"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"
                     android:layout_gravity="center_vertical|end"
-                    android:src="@drawable/baseline_refresh_24"
+                    android:layout_weight="4"
                     android:background="@android:color/transparent"
-                    />
+                    android:src="@drawable/baseline_refresh_24" />
             </LinearLayout>
-
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Plant Monitor"
-                android:textSize="40sp"
-                android:textColor="@color/white"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="25dp"
-                android:fontFamily="@font/sofiaprosoftbold"/>
+                android:fontFamily="@font/sofiaprosoftbold"
+                android:text="Plant Monitor"
+                android:textSize="40sp" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="14dp"
-                app:cardCornerRadius="25dp"
-                android:padding="10dp"
                 android:background="#14491F"
-                app:cardBackgroundColor="#14491F">
+                android:padding="10dp"
+                app:cardBackgroundColor="#14491F"
+                app:cardCornerRadius="25dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgPlant"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/lettuce"/>
+                    android:src="@drawable/lettuce" />
 
             </com.google.android.material.card.MaterialCardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lettuce"
-                    android:textColor="@color/white"
-                    android:textSize="28sp"
-                    android:fontFamily="@font/sofiaprosoftmedium"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginVertical="2dp"
-                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="2dp"
+                android:fontFamily="@font/sofiaprosoftmedium"
+                android:text="Lettuce"
+                android:textSize="28sp" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@android:color/transparent"
                 android:layout_marginHorizontal="15dp"
-                app:cardCornerRadius="20dp"
                 android:layout_marginVertical="20dp"
-                app:strokeWidth="1.5dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="20dp"
                 app:strokeColor="#3D8561"
-                >
+                app:strokeWidth="1.5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/tvHumidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidity: "
-                        android:fontFamily="@font/sofiaprosoftmedium"
-                        android:layout_marginTop="15dp"
-                        android:textColor="@color/white"
                         android:layout_marginLeft="25dp"
-                        android:textSize="20sp"/>
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:text="Humidity: "
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/tvTemperature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
-                        android:text="Temperature: "
-                        android:fontFamily="@font/sofiaprosoftmedium"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:text="Temperature: "
                         android:textSize="20sp" />
 
                     <TextView
@@ -149,10 +137,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
-                        android:text="SoilMoisture: "
-                        android:fontFamily="@font/sofiaprosoftmedium"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:text="SoilMoisture: "
                         android:textSize="20sp" />
 
                     <TextView
@@ -160,18 +147,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
-                        android:text="CO2 Level: "
-                        android:fontFamily="@font/sofiaprosoftmedium"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="15dp"
-                        />
+                        android:fontFamily="@font/sofiaprosoftmedium"
+                        android:text="CO2 Level: "
+                        android:textSize="20sp" />
                 </LinearLayout>
 
 
             </com.google.android.material.card.MaterialCardView>
-
 
 
         </LinearLayout>
